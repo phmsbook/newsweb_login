@@ -1,0 +1,188 @@
+<html>
+    <head>
+    <script type="text/javascript">
+     
+        function validate()
+        {
+            var user = document.getElementById("user").value
+            var pwd = document.getElementById("pwd").value
+            var tip = document.getElementById('login_text')
+            if(user == "tom"&&pwd == "123")
+            {
+                window.location = 'https://mail.swpu.edu.cn/'
+            }
+            else if(user.length == null|| pwd.length == 0)
+            {
+                 
+                tip.innerHTML = '请输入用户名或密码';
+                tip.style.width='280px';
+                tip.style.height='30px';
+                tip.style.backgroundColor='#cc3300';
+                tip.style.color='white';
+                tip.style.textAlign='center';
+                tip.style.lineHeight='31px';                
+            }else{
+                tip.innerHTML = '您填写的用户名或密码错误';
+                tip.style.width='280px';
+                tip.style.height='30px';
+                tip.style.backgroundColor='#cc3300';
+                tip.style.color='white';
+                tip.style.textAlign='center';
+                tip.style.lineHeight='31px';                
+                }
+    
+        }
+    </script>
+    
+    </head>
+    
+    <style>
+        *{ margin:0; padding:0}
+        .head{height:76px; line-height:90px; background:#f5f5f5;}
+        .logo{padding-top:15px; float:left}
+        .help{float:right;font-size:14px;font-weight:700;color:#787878;}
+        .head_mid{width:964px;margin: auto;}
+    
+        .mid{
+            height: 460px;
+            width: 964px;
+            background-image: url(login_bg_05.jpg);
+            margin: auto;
+            margin-top: 15px;
+            overflow:hidden;
+        }
+        .login_title{
+            height: 40px;
+            width: 380px;
+            margin-left: 500px;
+            margin-top: 70px; 
+            background-color: rgba(255,126,0,0.8);
+            text-align: center;
+            color:#fff;
+            font-size: 16px;
+            
+            
+        }
+        .login_title span{
+            vertical-align: middle;
+            line-height: 40px;
+        }
+    
+        .login_box{
+            margin-top: 0px; 
+            margin-left: 500px; 
+            width: 380px;
+            height: 310px;
+            background-color: white;
+            overflow:hidden;
+    
+            
+    
+        }
+        .login_text{
+            font-weight: bold;
+            font-size: 16px;
+            font-family: "微软雅黑",Verdana, Geneva, sans-serif;
+            width: 280px;
+            height: 30px;
+        }
+        .login_box2{
+            margin-left: 40px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .user_input{
+            margin-top: 10px;
+        }
+        .pwd_input{
+            margin-top: 15px;
+        }
+        #user,#pwd{
+            background-color:rgba(243, 243, 243, 0.8);
+            height: 36px;
+            width: 280px;
+            font-size: 20px;
+            
+        }
+        .tips{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .login_tip{
+            color: red;
+        }
+       
+        .btn{
+            width: 175px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 3px;
+            background-color: rgba(85,154,223);
+            position: absolute;
+            margin-left: 110px;
+        }
+        .btn:hover{
+                background-color: rgba(57,121,208);
+        }
+        
+    
+        .foot{
+            text-align: center;
+            padding-top: 20px;
+            margin: 0 auto;
+            width: 964px;
+            height: 40px;
+            background-color: #f5f5f5;
+            font-size: 12px;
+        }
+        
+    
+    </style>
+    
+    <body>
+        <div class="head">
+            <div class="head_mid">
+                <div class = "logo">
+                    <img src="login_logo.png">
+                </div>
+                <div class="help">
+                    <a>帮助</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="mid">
+            <div id="tip"></div>
+            <div class="login_title" >
+                <span>账号登陆</span>
+            </div>
+            <div class="login_box">
+                <div class="login_box2">
+                    <div class="login_text" id="login_text" font-family:"微软雅黑">用户登陆</div>
+                    <div class="user_input">
+                        <input type="text" id="user" placeholder="用户名">
+                    </div>
+                    <div class="pwd_input">
+                        <input type="password" id="pwd" placeholder="密码">
+                    </div>
+                    <div class="tips">
+                        <div class="login_tip">学生选择@stu.swpu.edu.cn</div>
+                        
+                    </div>
+                    
+                    <input type="submit" class="btn" value="登陆" onclick="validate()">
+                    
+                </div>
+                
+            </div>
+    
+        </div>
+    
+        <div class="foot">
+            西南石油大学
+        </div>
+    </body>
